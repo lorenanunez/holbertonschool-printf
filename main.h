@@ -6,7 +6,7 @@
 #include <unistd.h>
 #include <stdio.h>
 #include <stdarg.h>
-#include <climits>
+#include <limits.h>
 
 typedef struct print
 {
