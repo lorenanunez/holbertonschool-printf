@@ -49,6 +49,7 @@ return (length);
  * printByType - this function check for the type of format to be printed.
  *
  * @theChar: a char that should match with one of the keys.
+ * @params: the argument list.
  *
  * Description: Recieves a char and a argument list then initialize
  * a struct with the keys to match with the recived char and their functions,

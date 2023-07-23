@@ -14,7 +14,7 @@ int (*function)(va_list types);
 } print_filter;
 
 int _putchar(char c);
-void printMinInt();
+void printMinInt(void);
 int _printf(const char *format, ...);
 int printCharacter(va_list list);
 int printPercentaje(va_list list);
