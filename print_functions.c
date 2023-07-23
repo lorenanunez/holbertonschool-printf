@@ -5,7 +5,6 @@
  *
  * @list: the arument list.
  *
- *
  * Description: Prints only one character and increments
  * the amount of printed characters by 1.
  *
@@ -48,3 +47,33 @@ count++;
 return (count);
 }
 
+/**
+ * printPercentaje - prints a %.
+ *
+ * @list: list of arguments (unused).
+ *
+ * Description: prints a %.
+ *
+ * Return: 1.
+ */
+
+int printPercentaje(__attribute__((unused)) va_list list)
+{
+putchar('%');
+return (1);
+}
+
+/**
+ * printNumbers - prints a number.
+ *
+ * @list: list of arguments.
+ *
+ * Description: prints a number.
+ *
+ * Return: 1.
+ */
+
+int printNumbers(__attribute__((unused)) va_list list)
+{
+return (1);
+}
