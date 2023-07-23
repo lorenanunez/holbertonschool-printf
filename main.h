@@ -7,12 +7,18 @@
 #include <stdio.h>
 #include <stdarg.h>
 
+typedef struct print
+{
+  char *type;
+  int (*function)(va_list types);
+} print_filter;
+
+int _putchar(char c);
+void printMinInt();
 int _printf(const char *format, ...);
-void printCharacter(va_list list, int *lenght);
-void printString(va_list list, int *length);
-void printDigit(char *theDigit, int *lenght);
-void printDecimal(char *theDecimal, int *lenght);
-void printEscaped(char *theEscapedCharacter, int *lenght);
-void printByType(const char *theChar, int *length, va_list params)
+int printCharacter(va_list list);
+int printString(va_list list);
+int printNumbers(va_list list);
+int printByType(char theChar, va_list params);
 
 #endif
