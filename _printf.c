@@ -54,7 +54,7 @@ return (length);
  * Description: Recieves a char and a argument list then initialize
  * a struct with the keys to match with the recived char and their functions,
  * if there is a match between the key and theChar, the respective
- * function is called passing the list of arguments params as a parameter. 
+ * function is called passing the list of arguments params as a parameter.
  * If there is not a match, print a % and the theChar.
  *
  * Return: The length of the printed string.
