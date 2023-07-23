@@ -10,8 +10,8 @@
 
 typedef struct print
 {
-char *type;
-int (*function)(va_list types);
+	char *type;
+	int (*function)(va_list types);
 } print_filter;
 
 int _putchar(char c);
