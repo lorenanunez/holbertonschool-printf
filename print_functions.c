@@ -13,10 +13,11 @@
 
 int printCharacter(va_list list)
 {
-char c;
-c = va_arg(list, int);
-putchar(c);
-return (1);
+	char c;
+
+	c = va_arg(list, int);
+	putchar(c);
+	return (1);
 }
 
 /**
@@ -34,17 +35,20 @@ return (1);
 
 int printString(va_list list)
 {
-char *theString = va_arg(list, char*);
-int i;
-int count = 0;
-if (theString == NULL)
-theString = "(null)";
-for (i = 0; theString[i] != '\0'; i++)
-{
-putchar(theString[i]);
-count++;
-}
-return (count);
+	char *theString = va_arg(list, char*);
+	int i;
+	int count = 0;
+
+	if (theString == NULL)
+	{
+		theString = "(null)";
+	}
+	for (i = 0; theString[i] != '\0'; i++)
+	{
+		putchar(theString[i]);
+		count++;
+	}
+	return (count);
 }
 
 /**
@@ -59,8 +63,8 @@ return (count);
 
 int printPercentaje(__attribute__((unused)) va_list list)
 {
-putchar('%');
-return (1);
+	putchar('%');
+	return (1);
 }
 
 /**
@@ -75,5 +79,5 @@ return (1);
 
 int printNumbers(__attribute__((unused)) va_list list)
 {
-return (1);
+	return (1);
 }

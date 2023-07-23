@@ -16,33 +16,37 @@
 
 int _printf(const char *format, ...)
 {
-int i, length = 0;
-va_list list;
+	int i, length = 0;
+	va_list list;
 
-va_start(list, format);
-if (format == NULL)
-{
-va_end(list);
-return (-1);
-}
-for (i = 0; i < (int) strlen(format); i++)
-{
-if (format[i] == '%')
-{
-if (format[i + 1] != '\0')
-length += printByType(format[i + 1], list);
-else
-return (-1);
-i++;
-}
-else
-{
-putchar(format[i]);
-length++;
-}
-}
-va_end(list);
-return (length);
+	va_start(list, format);
+	if (format == NULL)
+	{
+		va_end(list);
+		return (-1);
+	}
+	for (i = 0; i < (int) strlen(format); i++)
+	{
+		if (format[i] == '%')
+		{
+			if (format[i + 1] != '\0')
+			{
+				length += printByType(format[i + 1], list);
+			}
+			else
+			{
+				return (-1);
+			}
+			i++;
+		}
+		else
+		{
+			putchar(format[i]);
+			length++;
+		}
+	}
+	va_end(list);
+	return (length);
 }
 
 /**
@@ -62,27 +66,28 @@ return (length);
 
 int printByType(char theChar, va_list params)
 {
-int position = 0;
-print_filter keys[] = {
-{"c", printCharacter},
-{"s", printString},
-{"i", printNumbers},
-{"d", printNumbers},
-{"%", printPercentaje},
-{NULL, NULL}, };
-while (keys[position].type)
-{
-if (*(keys[position].type) == theChar)
-{
-return (keys[position].function(params));
-}
-position++;
-}
-if (keys[position].type == NULL)
-{
-write(1, "%", 1);
-write(1, &theChar, 1);
-return (2);
-}
-return (0);
+	int position = 0;
+	print_filter keys[] = {
+		{"c", printCharacter},
+		{"s", printString},
+		{"i", printNumbers},
+		{"d", printNumbers},
+		{"%", printPercentaje},
+		{NULL, NULL}
+	};
+	while (keys[position].type)
+	{
+		if (*(keys[position].type) == theChar)
+		{
+			return (keys[position].function(params));
+		}
+		position++;
+	}
+	if (keys[position].type == NULL)
+	{
+		write(1, "%", 1);
+		write(1, &theChar, 1);
+		return (2);
+	}
+	return (0);
 }
