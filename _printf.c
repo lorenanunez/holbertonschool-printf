@@ -45,6 +45,11 @@ va_end(list);
 return (length);
 }
 
+int printNumbers(__attribute__((unused)) va_list list)
+{
+return (1);
+}
+
 int printPercentaje(__attribute__((unused)) va_list list)
 {
   putchar('%');
