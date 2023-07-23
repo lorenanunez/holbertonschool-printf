@@ -9,14 +9,15 @@
 
 typedef struct print
 {
-  char *type;
-  int (*function)(va_list types);
+char *type;
+int (*function)(va_list types);
 } print_filter;
 
 int _putchar(char c);
 void printMinInt();
 int _printf(const char *format, ...);
 int printCharacter(va_list list);
+int printPercentaje(va_list list);
 int printString(va_list list);
 int printNumbers(va_list list);
 int printByType(char theChar, va_list params);
