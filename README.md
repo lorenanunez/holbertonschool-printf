@@ -62,12 +62,12 @@ Will print "My chances of winning are %5".
 
 
 
- 1. First we need to check if the string isn't empty and if is empty the function returns an error message.
-  2. We itterate the string looking for the percentage simbol.
-   3. We check if after finding the next position is a char '\0' and if it is return an error message.
-    4. if is not '\0' we call the function print_functions.c for check if the's a match between the character and the filter.
-     5. If there is a match, the respective function is called from print_functions.c
-      6. if the character is 's', 'c', 'd', 'i', '%', NULL will print a string, a character, a number, a percentaje or NULL respectively.
+1. First we need to check if the string isn't empty and if is empty the function returns an error message.
+2. We itterate the string looking for the percentage simbol.
+3. We check if after finding the next position is a char '\0' and if it is return an error message.
+4. if is not '\0' we call the function print_functions.c for check if the's a match between the character and the filter.
+5. If there is a match, the respective function is called from print_functions.c
+6. if the character is 's', 'c', 'd', 'i', '%', NULL will print a string, a character, a number, a percentaje or NULL respectively.
       ## Requirements
 
 ### General
