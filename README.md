@@ -101,7 +101,7 @@ Will print "My chances of winning are %5".
  - _printf.c
   - _putchar.c
    - main.h
-    - print_functions.c
+- print_functions.c
 
 
 **Authors**
